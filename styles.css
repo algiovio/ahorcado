@@ -5,9 +5,9 @@ body {
 }
 
 #game-container {
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 600px;
+    margin: 5% auto;
+    padding: 10px;
+    max-width: 400px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -26,23 +26,23 @@ body {
 }
 
 #word-container {
-    margin: 20px 0;
-    font-size: 24px;
-    letter-spacing: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    letter-spacing: 8px;
 }
 
 #letters-container {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 #letters-container button {
     margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 10px;
+    font-size: 14px;
 }
 
 #reset-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
 }
