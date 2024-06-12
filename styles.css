@@ -4,6 +4,53 @@ body {
     background-color: #f4f4f4;
 }
 
+#logo {
+    background-image: url(images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+    
+#logo h1 {
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #000, 
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000;
+}
+
+
+header {
+    background-color: var(--fourth_color);
+    text-align: center;
+    padding: 20px;
+}
+
+header a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #6c757d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
 #game-container {
     margin: 5% auto;
     padding: 10px;
