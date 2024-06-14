@@ -65,6 +65,15 @@ header {
                  -1px 1px 0 #000;
 }
 
+/*Dropdown*/
+
+.dropdown-content a {
+    color: white;
+    padding: 20px 20px; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
 footer {
     background-color: #6c757d;
     color: #ffffff;
