@@ -193,14 +193,14 @@ footer {
     
     }
       
-    .dropdown-content a:hover {background-color: var(--second_color)}
+    .dropdown-content a:hover {background-color: #6c757d}
       
     .dropdown:hover .dropdown-content {
         display: block; 
     }
       
     .dropdown:hover .dropbtn {
-        background-color: var(--third_color);
+        background-color: #B1B2FF;
     }
 }
 @media (min-width: 768px) {
@@ -219,11 +219,7 @@ footer {
             align-items: center;
         }
     
-        .dropdown-content a:hover {background-color: var(--second_color)}
-    
-        .dropdown:hover .dropbtn {
-            background-color: var(--third_color);
-        }
+        .dropdown-content a:hover {color: #D2DAFF}
 }
 
 @media (max-width: 400px) {
