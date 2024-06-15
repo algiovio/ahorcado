@@ -74,6 +74,10 @@ header {
     font-weight: bold;
 }
 
+.dropdown-content a:hover {
+    color: var(--first_color);
+}
+
 footer {
     background-color: #6c757d;
     color: #ffffff;
