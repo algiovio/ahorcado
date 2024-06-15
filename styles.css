@@ -223,7 +223,7 @@ footer {
             align-items: center;
         }
     
-        .dropdown-content a:hover {color: #D2DAFF}
+        .dropdown-content a:hover {color: var(--first_color)}
 }
 
 @media (max-width: 400px) {
