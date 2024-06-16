@@ -8,32 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container-header">
-            <div class="container-redes">
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-            <div class="logo">
-                <h1>RUEDAS</h1>
-                <img src="images/logo.png" alt="logo1"> 
-                <h1>SEGURAS</h1>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Menu</button>
-                <nav class="dropdown-content">
-                    <a href="https://soutolucianab.github.io/TPO-Grupo7/index.html">Home</a>
-                    <a href="https://soutolucianab.github.io/TPO-Grupo7/integrantes.html">Integrantes</a>
-                    <a href="https://soutolucianab.github.io/TPO-Grupo7/avances.html">Avances</a>
-                    <a href="https://soutolucianab.github.io/TPO-Grupo7/juegos.html">Juegos</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
     <div id="game-container">
         <h1>Juego de Ahorcado: Seguridad Vial</h1>
+        <p id="scoreboard">
+            <span id="victorias">Victorias: 0</span> |
+            <span id="derrotas">Derrotas: 0</span>
+        </p>
         <div id="hangman-container">
             <svg height="150" width="120" class="figure-container">
                 <!-- Base -->
@@ -63,13 +43,14 @@
         <p id="message"></p>
         <div id="letters-container"></div>
         <button id="reset-button" onclick="startGame()">Reiniciar Juego</button>
+        <br>
+        <br>
+        <button id="reset-button-" onclick="window.location.href='https://soutolucianab.github.io/TPO-Grupo7/index.html'">Menú Principal</button>
+        <button id="reset-button--" onclick="window.location.href='https://soutolucianab.github.io/TPO-Grupo7/juegos.html'">Más juegos</button>
+        <br>
+        <br>    
     </div>
     <script src="script.js"></script>
-    
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Derechos reservados.
-    </footer>
+
 </body>
 </html>
-
