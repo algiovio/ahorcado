@@ -9,6 +9,8 @@ const palabras = [
 let palabraActual;
 let letrasAdivinadas;
 let intentosRestantes;
+let victorias = 0;
+let derrotas = 0;
 const maxIntentos = 6;
 const figureParts = document.querySelectorAll('.figure-part');
 
@@ -22,7 +24,10 @@ function startGame() {
     
     document.getElementById('pista').textContent = `Pista: ${pista}`;
     document.getElementById('message').textContent = '';
+    document.getElementById('message').classList.remove('success', 'failure'); // Eliminar clases de éxito y fracaso
     document.getElementById('word-container').textContent = '_ '.repeat(palabraActual.length);
+    document.getElementById('victorias').textContent = `Victorias: ${victorias}`;
+    document.getElementById('derrotas').textContent = `Derrotas: ${derrotas}`;
     
     const lettersContainer = document.getElementById('letters-container');
     lettersContainer.innerHTML = '';
@@ -61,21 +66,41 @@ function guessLetter(letter) {
     
     wordContainer.textContent = displayedWord.trim();
     
-    if (palabraActual.includes(letter)) {
-        if (allLettersGuessed) {
-            document.getElementById('message').textContent = '¡Felicidades! Has adivinado la palabra.';
-            document.getElementById('letters-container').innerHTML = '';
-        }
+    if (allLettersGuessed) {
+        victorias++;
+        updateScoreboard();
+        document.getElementById('message').textContent = '¡Felicidades! Adivinaste la palabra.';
+        document.getElementById('message').classList.add('success'); // Agregar clase 'success'
+        document.getElementById('letters-container').innerHTML = '';
+    } else if (intentosRestantes === 0) {
+        derrotas++;
+        updateScoreboard();
+        document.getElementById('message').textContent = `¡Has sido ahorcado/a! La palabra era: ${palabraActual}`;
+        document.getElementById('message').classList.add('failure'); // Agregar clase 'failure'
+        document.getElementById('letters-container').innerHTML = '';
+    } else if (palabraActual.includes(letter)) {
+        // No haces nada aquí porque ya se maneja en el bloque de victoria
     } else {
         intentosRestantes--;
         if (intentosRestantes >= 0) {
             figureParts[maxIntentos - intentosRestantes - 1].style.display = 'block';
         }
         if (intentosRestantes === 0) {
-            document.getElementById('message').textContent = `Lo siento, has perdido. La palabra era: ${palabraActual}`;
+            derrotas++;
+            updateScoreboard();
+            document.getElementById('message').textContent = `¡Has sido ahorcado/a! La palabra era: ${palabraActual}`;
+            document.getElementById('message').classList.add('failure'); // Agregar clase 'failure'
             document.getElementById('letters-container').innerHTML = '';
         }
     }
 }
 
+function updateScoreboard() {
+    document.getElementById('victorias').textContent = `Victorias: ${victorias}`;
+    document.getElementById('derrotas').textContent = `Derrotas: ${derrotas}`;
+}
+
 startGame();
+
+
+
