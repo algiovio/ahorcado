@@ -7,7 +7,6 @@
     --sixth_color: #1F2A33;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -15,6 +14,33 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.title  {
+    text-align: center;
+}
+
+.github {
+    color: var(--first_color);
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.github:hover {
+    text-decoration:underline;
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 20px; /* Espacio superior */
+}
+
 
 /* header */
 header {
@@ -127,4 +153,14 @@ header {
 
 #message.failure {
     color: red;
+}
+
+@media (max-width: 400px) {
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px; /* Espacio entre botones */
+        margin-top: 20px; /* Espacio superior */
+    }
 }
