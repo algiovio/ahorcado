@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahorcado - Seguridad Vial</title>
+    <title>Juego de Ahorcado: Seguridad Vial</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="intro-container">
-        <h2>¡Ahorcado!</h2>
-        <p>Es un minijuego que tiene por objetivo evaluar y fijar los conocimientos sobre la señalización de tráfico.</p>
-        <p><strong>Reglas:</strong> Para adivinar la palabra, lee la pista y selecciona las letras que la componen. Solo puedes equivocarte 6 veces antes de ser ahorcado!</p>
-        <p><strong>Recuerda:</strong> Conocer las señales de tránsito es crucial, tanto si eres conductor o peatón. Te brindarán información útil sobre el lugar que estás transitando, hacia dónde ir, a qué velocidad, con qué tipo de vehículo, etc. Respetarlas ayuda a mantener el orden y la seguridad en la carretera.</p>
-        <p><strong>Autor:</strong> Alan Giovio</p>
-        <p><strong>Repositorio en GitHub:</strong> <a href="https://github.com/algiovio/ahorcado.git" target="_blank">Ver en GitHub</a></p>
-        <button onclick="window.location.href='index.html'">Jugar</button>
-        <button onclick="window.location.href='https://soutolucianab.github.io/TPO-Grupo7/index.html'">Menú Principal</button>
-        <button onclick="window.location.href='https://soutolucianab.github.io/TPO-Grupo7/juegos.html'">Más juegos</button>
-
+    <div id="game-container">
+        <h1>Juego de Ahorcado: Seguridad Vial</h1>
+        <p id="scoreboard">
+            <span id="victorias">Victorias: 0</span> |
+            <span id="derrotas">Derrotas: 0</span>
+        </p>
+        <div id="hangman-container">
+            <svg height="150" width="120" class="figure-container">
+                <!-- Base -->
+                <line x1="10" y1="140" x2="110" y2="140" />
+                <!-- Poste vertical -->
+                <line x1="30" y1="140" x2="30" y2="10" />
+                <!-- Poste horizontal -->
+                <line x1="30" y1="10" x2="90" y2="10" />
+                <!-- Cuerda -->
+                <line x1="90" y1="10" x2="90" y2="25" />
+                <!-- Cabeza -->
+                <circle cx="90" cy="35" r="10" class="figure-part" />
+                <!-- Cuerpo -->
+                <line x1="90" y1="45" x2="90" y2="90" class="figure-part" />
+                <!-- Brazo izquierdo -->
+                <line x1="90" y1="60" x2="70" y2="50" class="figure-part" />
+                <!-- Brazo derecho -->
+                <line x1="90" y1="60" x2="110" y2="50" class="figure-part" />
+                <!-- Pierna izquierda -->
+                <line x1="90" y1="90" x2="70" y2="120" class="figure-part" />
+                <!-- Pierna derecha -->
+                <line x1="90" y1="90" x2="110" y2="120" class="figure-part" />
+            </svg>
+        </div>
+        <p id="pista"></p>
+        <div id="word-container"></div>
+        <p id="message"></p>
+        <div id="letters-container"></div>
+        <button id="reset-button" onclick="startGame()">Reiniciar Juego</button>
+        <br>
+        <br>
+        <button id="reset-button-" onclick="window.location.href='https://soutolucianab.github.io/TPO-Grupo7/index.html'">Menú Principal</button>
+        <button id="reset-button--" onclick="window.location.href='https://soutolucianab.github.io/TPO-Grupo7/juegos.html'">Más juegos</button>
+        <br>
+        <br>    
     </div>
+    <script src="script.js"></script>
+
 </body>
 </html>
